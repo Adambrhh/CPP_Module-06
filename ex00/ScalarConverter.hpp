@@ -6,7 +6,7 @@
 /*   By: abarahho <abarahho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 18:48:57 by abarahho          #+#    #+#             */
-/*   Updated: 2025/05/31 18:44:58 by abarahho         ###   ########.fr       */
+/*   Updated: 2025/08/19 11:58:02 by abarahho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 #define SCALARCONVERTER_HPP
 
 # include <iostream>
+# include <string>
+# include <limits>
+# include <iomanip>
+# include <cmath>
+# include <cctype>
+# include <cstdlib>
 
 enum type
 {
