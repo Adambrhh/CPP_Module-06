@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abarahho <abarahho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/19 15:09:34 by abarahho          #+#    #+#             */
-/*   Updated: 2025/08/19 17:02:38 by abarahho         ###   ########.fr       */
+/*   Created: 2025/08/19 17:00:39 by abarahho          #+#    #+#             */
+/*   Updated: 2025/08/19 17:08:59 by abarahho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZER_HPP
-# define SERIALIZER_HPP
+#ifndef BASE_HPP
+# define BASE_HPP
 
 # include <iostream>
-# include <stdint.h>
+# include <cstdlib>
+# include <ctime>
 
-struct Data
+class Base
 {
-    int         int_value;
-    std::string string_value;
-};
-
-class Serializer
-{
-private:
-	Serializer();
-	Serializer(Serializer const &);
-	Serializer	&operator=(Serializer const &);
-	~Serializer();
 public:
-    static  uintptr_t serialize(Data* ptr);
-    static  Data* deserialize(uintptr_t raw);
+    virtual~Base();
 };
 
 #endif
