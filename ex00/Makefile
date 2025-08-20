@@ -1,4 +1,4 @@
-NAME = ScalarConversion.00
+NAME = ScalarConversion
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 

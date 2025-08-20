@@ -6,7 +6,7 @@
 /*   By: abarahho <abarahho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 15:10:07 by abarahho          #+#    #+#             */
-/*   Updated: 2025/08/19 16:36:18 by abarahho         ###   ########.fr       */
+/*   Updated: 2025/08/19 17:24:07 by abarahho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,12 @@ int main() {
     std::cout << "Original pointer address: " << original_ptr << std::endl;
     std::cout << "Original data values: " << original_ptr->string_value << ", " << original_ptr->int_value << std::endl;
 
-    // Sérialisation
     uintptr_t serialized_data = Serializer::serialize(original_ptr);
     std::cout << "Serialized address (as uintptr_t): " << serialized_data << std::endl;
 
-    // Désérialisation
     Data* deserialized_ptr = Serializer::deserialize(serialized_data);
     std::cout << "Deserialized pointer address: " << deserialized_ptr << std::endl;
 
-    // Vérification
-    std::cout << "Checking if pointers are equal..." << std::endl;
     if (original_ptr == deserialized_ptr) {
         std::cout << "Pointers are equal. The conversion was successful." << std::endl;
         std::cout << "Values after deserialization: " << deserialized_ptr->string_value << ", " << deserialized_ptr->int_value << std::endl;
